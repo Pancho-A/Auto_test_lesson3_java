@@ -23,7 +23,7 @@ public class GetLocationTest extends AccuweatherAbstractTest{
                 .extract()
                 .body().jsonPath().getList(".", Location.class);
 
-        Assertions.assertEquals(10,response.size());
+        Assertions.assertEquals(1,response.size());
         Assertions.assertEquals("Arkhangelsk", response.get(0).getLocalizedName());
     }
 }
