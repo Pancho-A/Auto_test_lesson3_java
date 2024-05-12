@@ -1,5 +1,7 @@
 package org.max.lesson3.home.accuweather;
+import io.qameta.allure.*;
 import io.restassured.http.Method;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -7,6 +9,11 @@ import org.max.lesson3.seminar.accuweather.AccuweatherAbstractTest;
 
 import static io.restassured.RestAssured.given;
 public class GetWeatherFifteenDayTest extends AccuweatherAbstractTest {
+    @DisplayName("GetTenDay")
+    @Description("GET Day")
+    @Link("")
+    @Severity(SeverityLevel.TRIVIAL)
+    @Owner("Ананьев Павел")
     @ParameterizedTest
     @ValueSource(ints={50, 100, 150})
     void get_ten_day_return_401(int location) {
